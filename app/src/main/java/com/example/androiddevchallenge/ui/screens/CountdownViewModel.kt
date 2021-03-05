@@ -24,8 +24,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.R
 import java.util.Timer
-import java.util.concurrent.TimeUnit
-import kotlin.concurrent.fixedRateTimer
 
 public enum class CountdownStatus {
     Playing,
@@ -72,13 +70,13 @@ class CountdownViewModel : ViewModel() {
                     val newTimer = object : CountDownTimer(totalSeconds.toLong() * 1000, 1000) {
                         override fun onTick(millisUntilFinished: Long) {
                             val seconds = (millisUntilFinished / 1000).toInt()
-                            Log.d("TAG","seconds: $seconds")
-                            _secondsLeft.postValue(seconds +1)
-                            _progress.postValue((1 - ((seconds + 1 ).toFloat() / totalSeconds)))
+                            Log.d("TAG", "seconds: $seconds")
+                            _secondsLeft.postValue(seconds + 1)
+                            _progress.postValue((1 - ((seconds + 1).toFloat() / totalSeconds)))
                         }
 
                         override fun onFinish() {
-                            Log.d("TAG","finish")
+                            Log.d("TAG", "finish")
                             _secondsLeft.postValue(0)
                             _progress.postValue((1 - (0f / totalSeconds)))
                             _isPlaying.postValue(CountdownStatus.Finished)

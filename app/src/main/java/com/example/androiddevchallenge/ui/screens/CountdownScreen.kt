@@ -34,8 +34,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.composables.TimeSelectorGroup
 import com.example.androiddevchallenge.ui.composables.ProgressTimer
+import com.example.androiddevchallenge.ui.composables.TimeSelectorGroup
 
 @Composable
 fun CountdownScreen() {
