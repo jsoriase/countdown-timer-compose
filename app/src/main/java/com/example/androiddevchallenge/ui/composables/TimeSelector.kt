@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TimeUnitPicker(
+fun TimeSelector(
     value: Int,
     onIncrease: () -> Unit,
     onDecrease: () -> Unit

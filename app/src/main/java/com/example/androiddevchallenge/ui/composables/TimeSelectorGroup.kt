@@ -22,7 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-fun ComposeTimePicker(secondsRemaining: Int, increase: (Int) -> Unit, decrease: (Int) -> Unit) {
+fun TimeSelectorGroup(secondsRemaining: Int, increase: (Int) -> Unit, decrease: (Int) -> Unit) {
     Row(
         horizontalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxWidth()
